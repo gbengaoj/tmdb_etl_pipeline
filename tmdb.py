@@ -23,7 +23,6 @@ for movie_id in range(550, 556):
     r = requests.get(url)
     response_list.append(r.json())
 
-print(type(response_list))
 
 # Create a pandas dataframe from the response list using from_dict()
 
@@ -84,8 +83,6 @@ df_time_columns = ['id', 'release_date', 'day', 'month', 'year', 'day_of_week']
 # We export our tables by writing them to file.
 # This will create 3 .csv files in the same directory that our script is in.
 
-"""
 df[df_columns].to_csv('tmdb_movies.csv', index=False)
 df_genres.to_csv('tmdb_genres.csv', index=False)
 df[df_time_columns].to_csv('tmdb_datetimes.csv', index=False)
-"""
